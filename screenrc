@@ -1,0 +1,35 @@
+shell -$SHELL
+vbell off
+startup_message off
+defutf8 on
+defscrollback 1024
+nonblock on
+attrcolor b ".I"    # allow bold colors - necessary for some reason
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'   # tell screen how to set colors. AB = background, AF=foreground
+defbce on    # use current bg color for erased chars
+# hardstatusline
+hardstatus on
+hardstatus alwayslastline
+#hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
+# Very nice tabbed colored hardstatus line
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
+term xterm-256color
+
+#hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%<'
+
+# Startup settings
+screen -t bash     1
+screen -t bash     2
+
+# Fix stupid screen overwriting
+altscreen on
+
+# escape key
+escape ``
+
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
+bind c screen 1 # Window numbering starts at 1, not 0.
+bind 0 select 10
