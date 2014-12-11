@@ -19,6 +19,7 @@ set nocompatible
 set showcmd
 
 set ignorecase
+set smartcase
 
 " needed for syntax highlighting and stuff
 filetype on
@@ -54,3 +55,5 @@ set number
 " status line gnarliness
 set laststatus=2
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
+
+set backspace=2 " make backspace work like most other apps
