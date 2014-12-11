@@ -23,8 +23,8 @@ PS1='\[\033[36m\]m\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]$(_PS1 "$PWD" 30)\[\03
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
-alias amacs='aquamacs'
-alias vmd='/Applications/VMD\ 1.9.1.app/Contents/MacOS/startup.command'
+#alias amacs='aquamacs'
+#alias vmd='/Applications/VMD\ 1.9.1.app/Contents/MacOS/startup.command'
 alias tmux='TERM=xterm-256color tmux'
 # Un-comment and modify the following template for system-specific
 # personal settings.
