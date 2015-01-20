@@ -12,6 +12,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,3 +78,19 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 
 set backspace=2 " make backspace work like most other apps
+set encoding=utf-8 "Default encoding
+
+"Indent guide settings
+let g:indent_guides_guide_size = 1 "Skinny guides
+let g:indent_guides_start_level = 2 "Indent from second level onwards
+let g:indent_guides_enable_on_vim_startup = 1 "Start with Vim
+let g:indent_guides_default_mapping = 0 "Dont use the default shortcut key
+
+"colorscheme
+if !has("gui_running")
+    set background=dark
+    colorscheme solarized
+else
+    let g:molokai_original = 1
+    colorscheme molokai
+endif
